@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +9,91 @@
 
 </head>
 
-    <body>
-    <h2>Test gulp 9</h2>
+<body>
+
+
+    <header>
+        <h1>Super valid registration form</h1>
+    </header>
+
+    <section id="form-registration">
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info">
+                <p>Have questions or concerns? Reach out to us directly</p>
+                <ul>
+                    <li class="phone">555.555.5555</li>
+                    <li class="mail">contact@formdemo.com</li>
+                </ul>
+            </div>
+        </section>
+        <!-- /#contact-info -->
+
+        <section id="register">
+            <h2>Register</h2>
+            <form action="">
+
+                <div class="labelwrap">
+                    <div class="field">
+                        <label for="name">Name <span>require</span></label>
+                        <input type="text" name="name" value="" required/>
+                    </div>
+                    <div class="message">
+                    </div>
+                </div>
+
+                <div class="labelwrap">
+                    <div class="field">
+                        <label for="email">Email <span>require</span></label>
+                        <input type="email" name="email" value="" required/>
+
+                    </div>
+                    <div class="message">
+                        <p>Must be a valid email address</p>
+                    </div>
+                </div>
+
+                <div class="labelwrap">
+                    <div class="field">
+                        <label for="password">Password <span>require</span></label>
+                        <input type="password" name="password" value="" required/>
+                    </div>
+                    <div class="message">
+                        <p>Must cotain on uppercase letter, one lowercase letter, 10 or more characters, and at least one number.</p>
+                    </div>
+                </div>
+
+                <div class="labelwrap">
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" value="" />
+                    </div>
+                    <div class="message">
+                    </div>
+                </div>
+
+                <div class="labelwrap">
+                    <div class="field">
+                        <label for="phone">Country</label>
+                        <select type="tel" name="phone">
+                        <option value="us">US</option>
+                        <option value="uk">UK</option>
+                        <option value="canada">Canada</option>
+                        <option value="Chile">Chile</option>
+                        </select>
+                    </div>
+                    <div class="message">
+                    </div>
+                </div>
+
+                <button type="submit" name="button">register</button>
+            </form>
+
+        </section>
+        <!-- /#register -->
+    </section>
 
     <script src="js/js.js"></script>
-    </body>
+</body>
+
 </html>

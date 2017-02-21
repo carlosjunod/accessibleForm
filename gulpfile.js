@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 
@@ -35,5 +36,6 @@ gulp.task('browser-sync', function(){
 
 gulp.task('watch', ['browser-sync', 'scss'], function(){
     // refresh.listen()
-    gulp.watch(['./scss/*.scss', 'index.html'], ['scss'])
+    gulp.watch(['./scss/*.scss'], ['scss'])
+    gulp.watch("*.html").on("change", reload);
 })

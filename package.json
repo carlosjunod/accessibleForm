@@ -1,0 +1,31 @@
+{
+  "name": "accesible_form",
+  "version": "1.0.0",
+  "description": "Responsive image Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosjunod/accessibleForm.git"
+  },
+  "keywords": [
+    "Gallery",
+    "image",
+    "unsplash"
+  ],
+  "author": "@carlosjunod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosjunod/responsive-image-gallery/issues"
+  },
+  "homepage": "https://github.com/carlosjunod/responsive-image-gallery#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.4",
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

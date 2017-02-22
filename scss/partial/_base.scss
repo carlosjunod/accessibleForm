@@ -182,3 +182,16 @@ header{
         }
     }
 }
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
+    text-align: center;
+    background-color: rgba($dark, .1);
+    color: $dark;
+    font-size: 1rem;
+    p{
+        padding: 1rem 0;
+    }
+}

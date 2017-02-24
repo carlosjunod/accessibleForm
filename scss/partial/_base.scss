@@ -1,6 +1,10 @@
 
 html{
-    font-size: $font-base-line;
+    font-size: $font-base-line *1.3;
+
+    @include mq(mediumAndBigger){
+        font-size: $font-base-line;
+    }
 }
 
 body{
@@ -17,7 +21,7 @@ header{
 
     h1{
         color: $ligth;
-        line-height: 1rem;
+        line-height: 2.2rem;
         margin: 0px;
         text-transform: uppercase;
         font-size: 2.2rem;
@@ -89,8 +93,8 @@ header{
 
 
     form{
-    background-color: lighten($dark, 60);
-    padding: 4rem 2rem;
+    background-color: lighten($dark, 85);
+    padding: 4rem 2rem 2rem 2rem;
 
         .labelwrap{
             display: flex;
@@ -99,24 +103,23 @@ header{
             justify-content: space-around;
             align-content: space-around;
 
-            @include mq(mediumAndBigger){
+            @include mq(mediumIntermedium){
                 flex-direction: row;
             }
 
             .field{
                 display: flex;
                 flex-direction: column;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
 
                 @include mq(mediumAndBigger){
                     flex-basis: 60%;
-                    // background-color: red;
                 }
 
                 label{
                     color: lighten($dark, 10);
                     span{
-                        color: lighten($dark, 40);
+                        color: lighten($dark, 30);
                         font-size: 0.9em;
                         font-style: italic;
                         font-weight: lighter;
@@ -127,11 +130,19 @@ header{
                     }
                 }
 
-                input{
+                input, select{
                     padding: 1rem;
                     border-radius: 4px;
-                    border: 1px solid lighten($dark, 10);
-                    background-color: lighten($dark, 55);
+                    border: 1px solid rgba($dark, .2);
+                    background-color: rgba($dark, .1);
+                    width: 100%;
+                }
+
+                select{
+                    background-image: url(../images/down-chevron.svg);
+                    background-repeat: no-repeat;
+                    background-position: 98% center;
+                    appearance: none;
                 }
             }
 
@@ -140,7 +151,7 @@ header{
                 margin-top: 0rem;
                 transition: 300ms all ease-out;
 
-                @include mq(mediumAndBigger){
+                @include mq(mediumIntermedium){
                     // background-color: green;
                     margin-top: 2rem;
                     flex-basis: 30%;
@@ -160,8 +171,8 @@ header{
                     margin-top: 1rem;
                     p{
                         border-radius: 1rem;
-                        border-color: red;
-                        color: red;
+                        border-color: $alert;
+                        color: $alert;
                     }
 
                 }

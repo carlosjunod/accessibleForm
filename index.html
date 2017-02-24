@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Accesible Form</title>
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
@@ -31,12 +30,12 @@
 
         <section id="register">
             <h2>Register</h2>
-            <form action="">
+            <form action="" id="form">
 
                 <div class="labelwrap">
                     <div class="field">
                         <label for="name">Name <span>require</span></label>
-                        <input type="text" name="name" value="" required/>
+                        <input type="text" name="name" id="fullName" value="" required/>
                     </div>
                     <div class="message">
                     </div>
@@ -45,7 +44,7 @@
                 <div class="labelwrap">
                     <div class="field">
                         <label for="email">Email <span>require</span></label>
-                        <input type="email" name="email" value="" required/>
+                        <input type="email" name="email" id="email" value="" required/>
 
                     </div>
                     <div class="message ">
@@ -56,7 +55,7 @@
                 <div class="labelwrap">
                     <div class="field">
                         <label for="password">Password <span>require</span></label>
-                        <input type="password" name="password" value="" required/>
+                        <input type="password" name="password" id="password" value="" pattern="[a-zA-Z0-9]+" required/>
                     </div>
                     <div class="message alert">
                         <p>Must cotain on uppercase letter, one lowercase letter, 10 or more characters, and at least one number.</p>
@@ -66,7 +65,7 @@
                 <div class="labelwrap">
                     <div class="field">
                         <label for="phone">Phone</label>
-                        <input type="tel" name="phone" value="" />
+                        <input type="tel" name="phone" id="phone" value="" maxlength="20"/>
                     </div>
                     <div class="message">
                     </div>
@@ -75,11 +74,11 @@
                 <div class="labelwrap">
                     <div class="field">
                         <label for="phone">Country</label>
-                        <select type="tel" name="phone">
-                        <option value="us">US</option>
-                        <option value="uk">UK</option>
-                        <option value="canada">Canada</option>
-                        <option value="Chile">Chile</option>
+                        <select type="select" name="Country" id="country">
+                            <option value="us">US</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Canada</option>
+                            <option value="Chile">Chile</option>
                         </select>
                     </div>
                     <div class="message">
@@ -100,7 +99,7 @@
         <p>Build by @carlosjunod for DWS2</p>
     </footer>
 
-    <script src="js/js.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

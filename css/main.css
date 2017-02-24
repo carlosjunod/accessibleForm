@@ -59,7 +59,10 @@ h6 {
   font-size: 1.6rem; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 81.25%; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -68,12 +71,12 @@ body {
   background-color: #f9f9f9; }
 
 header {
-  background-color: #515151;
+  background-color: #0B3954;
   padding: 3rem 4rem;
   margin-bottom: 2rem; }
   header h1 {
     color: #f9f9f9;
-    line-height: 1rem;
+    line-height: 2.2rem;
     margin: 0px;
     text-transform: uppercase;
     font-size: 2.2rem; }
@@ -106,7 +109,7 @@ header {
       -ms-flex-preferred-size: 35%;
           flex-basis: 35%; } }
   #contact-info .info {
-    background-color: #4c8de2;
+    background-color: #087E8B;
     color: #f9f9f9;
     padding: 2rem; }
     #contact-info .info p {
@@ -129,8 +132,8 @@ header {
         flex-basis: 60%; } }
 
 #register form {
-  background-color: #eaeaea;
-  padding: 4rem 2rem; }
+  background-color: white;
+  padding: 4rem 2rem 2rem 2rem; }
   #register form .labelwrap {
     display: -ms-flexbox;
     display: flex;
@@ -141,7 +144,7 @@ header {
         justify-content: space-around;
     -ms-flex-line-pack: distribute;
         align-content: space-around; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       #register form .labelwrap {
         -ms-flex-direction: row;
             flex-direction: row; } }
@@ -149,37 +152,43 @@ header {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
-          flex-direction: column;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-direction: column; }
       @media only screen and (min-width: 768px) {
         #register form .labelwrap .field {
           -ms-flex-preferred-size: 60%;
               flex-basis: 60%; } }
       #register form .labelwrap .field label {
-        color: #6b6b6b; }
+        color: #115881; }
         #register form .labelwrap .field label span {
-          color: #b7b7b7;
+          color: #1d95db;
           font-size: 0.9em;
           font-style: italic;
           font-weight: lighter; }
           #register form .labelwrap .field label span:before {
             content: "*"; }
-      #register form .labelwrap .field input {
+      #register form .labelwrap .field input, #register form .labelwrap .field select {
         padding: 1rem;
         border-radius: 4px;
-        border: 1px solid #6b6b6b;
-        background-color: #dddddd; }
+        border: 1px solid rgba(11, 57, 84, 0.2);
+        background-color: rgba(11, 57, 84, 0.1);
+        width: 100%; }
+      #register form .labelwrap .field select {
+        background-image: url(../images/down-chevron.svg);
+        background-repeat: no-repeat;
+        background-position: 98% center;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
     #register form .labelwrap .message {
       margin-top: 0rem;
       transition: 300ms all ease-out; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 1024px) {
         #register form .labelwrap .message {
           margin-top: 2rem;
           -ms-flex-preferred-size: 30%;
               flex-basis: 30%; } }
       #register form .labelwrap .message p {
-        color: #848484;
+        color: #1776ae;
         font-size: 0.9em;
         font-style: italic;
         font-weight: lighter;
@@ -190,10 +199,10 @@ header {
         margin-top: 1rem; }
         #register form .labelwrap .message.alert p {
           border-radius: 1rem;
-          border-color: red;
-          color: red; }
+          border-color: #FF5A5F;
+          color: #FF5A5F; }
   #register form button {
-    background-color: #4c8de2;
+    background-color: #087E8B;
     border-style: none;
     color: #f9f9f9;
     padding: 1.4rem 2rem;
@@ -205,8 +214,8 @@ footer {
   position: fixed;
   bottom: 0rem;
   text-align: center;
-  background-color: rgba(81, 81, 81, 0.1);
-  color: #515151;
+  background-color: rgba(11, 57, 84, 0.1);
+  color: #0B3954;
   font-size: 1rem; }
   footer p {
     padding: 1rem 0; }

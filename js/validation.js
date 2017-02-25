@@ -1,11 +1,10 @@
 var submit = document.querySelector('#form button');
+var form = document.querySelector('#form');
 var fullName = document.querySelector('#fullName');
 var email = document.querySelector('#email');
 var password = document.querySelector('#password');
 var phone = document.querySelector('#phone');
 var country = document.querySelector('#country').selected;
-
-
 
 class InputValidator{
     constructor(input, type, errors){
@@ -34,11 +33,11 @@ class InputValidator{
 
         if (this.type == 'text' || this.type == 'password') {
             if (status.tooLong) {
-                this.addError("the value is too long");
+                this.addError('the value is too long');
             }
 
             if(status.tooShort){
-                this.addError("the value is too short");
+                this.addError('the value is too short');
             }
         }
 
@@ -58,7 +57,7 @@ class InputValidator{
 
         if(this.type == 'email'){
             if(!this.input.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)){
-                this.addError("this is not a valid format (eg. name@domain.dot)");
+                this.addError('this is not a valid format (eg. name@domain.dot)');
             }
         }
     }
@@ -72,12 +71,13 @@ submit.addEventListener('click', (el)=> {
     console.log("REACHED");
 
     //Creating objects
-    var fullNameValidate = new InputValidator(fullName, "text");
-    var emailValidate = new InputValidator(email, "email");
-    var passwordValidate = new InputValidator(password, "password");
-    var phoneValidate = new InputValidator(phone, "tel");
+    var fullNameValidate = new InputValidator(fullName, 'text');
+    var emailValidate = new InputValidator(email, 'email');
+    var passwordValidate = new InputValidator(password, 'password');
+    var phoneValidate = new InputValidator(phone, 'tel');
     var messages = document.querySelectorAll('.message');
 
+    // adding class alert for the messages containers
     messages.forEach((messages)=>{
         if (!messages.classList.contains('alert')) {
                 messages.className += ' alert';
@@ -85,8 +85,7 @@ submit.addEventListener('click', (el)=> {
 
     })
 
-
-    //messages
+    //messages containers
     var msgName = document.querySelector('[data-name]');
     var msgEmail = document.querySelector('[data-email]');
     var msgPass = document.querySelector('[data-password]');
@@ -99,16 +98,19 @@ submit.addEventListener('click', (el)=> {
     passwordValidate.getErrors();
     phoneValidate.getErrors();
 
-    // printing messages
-    msgName.innerHTML = fullNameValidate.errors.join("");
-    msgEmail.innerHTML = emailValidate.errors.join("");
-    msgPass.innerHTML = passwordValidate.errors.join("");
-    msgPhone.innerHTML = phoneValidate.errors.join("");
-    msgPass.innerHTML = passwordValidate.errors.join("");
-
+    form.addEventListener('change', ()=>{
+        // printing messages
+        msgName.innerHTML = fullNameValidate.errors.join('');
+        msgEmail.innerHTML = emailValidate.errors.join('');
+        msgPass.innerHTML = passwordValidate.errors.join('');
+        msgPhone.innerHTML = phoneValidate.errors.join('');
+        msgPass.innerHTML = passwordValidate.errors.join('');
+    })
+    
     console.log(messages);
 
-    if (msgName.innerHTML === "") {
+    // check if messages are empty.
+    if (msgName.innerHTML === '' && msgEmail.innerHTML === '' && msgPass.innerHTML === '' && msgPhone.innerHTML === '') {
         console.log("IS EMPTY");
         submit.removeEventListener('click', this);
         submit.addEventListener('click', done());
@@ -117,7 +119,7 @@ submit.addEventListener('click', (el)=> {
 })
 
 function done(){
-    var form = document.querySelector('#form');
+
     form.innerHTML = `
     <div id="submited">
     <img src="images/circle-check.svg" alt="ok" />

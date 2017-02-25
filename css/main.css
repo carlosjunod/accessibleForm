@@ -187,20 +187,29 @@ header {
           margin-top: 2rem;
           -ms-flex-preferred-size: 30%;
               flex-basis: 30%; } }
-      #register form .labelwrap .message p {
+      #register form .labelwrap .message li {
         color: #1776ae;
         font-size: 0.9em;
         font-style: italic;
         font-weight: lighter;
         padding: 1rem;
-        border-radius: 1rem;
-        border: 1px dashed transparent; }
+        position: relative; }
       #register form .labelwrap .message.alert {
-        margin-top: 1rem; }
-        #register form .labelwrap .message.alert p {
-          border-radius: 1rem;
-          border-color: #FF5A5F;
-          color: #FF5A5F; }
+        margin-top: 2rem;
+        border-radius: 1rem; }
+        #register form .labelwrap .message.alert li {
+          color: white;
+          background-color: #FF5A5F; }
+          #register form .labelwrap .message.alert li:first-child:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 4rem 0;
+            border-color: transparent #FF5A5F transparent transparent;
+            left: -30px; }
   #register form button {
     background-color: #087E8B;
     border-style: none;
@@ -208,6 +217,18 @@ header {
     padding: 1.4rem 2rem;
     font-size: 2rem;
     width: 100%; }
+  #register form #submited {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 20vh 0px; }
+    #register form #submited img {
+      margin-bottom: 5rem; }
 
 footer {
   width: 100%;

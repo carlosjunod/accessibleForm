@@ -151,34 +151,50 @@ header{
                 margin-top: 0rem;
                 transition: 300ms all ease-out;
 
+
                 @include mq(mediumIntermedium){
                     // background-color: green;
                     margin-top: 2rem;
                     flex-basis: 30%;
                 }
-                p{
+                li{
                     color: lighten($dark, 20);
                     font-size: 0.9em;
                     font-style: italic;
                     font-weight: lighter;
                     padding: 1rem;
-                    border-radius: 1rem;
-                    border: 1px dashed transparent;
+                    position: relative;
                 }
 
                 &.alert {
 
-                    margin-top: 1rem;
-                    p{
-                        border-radius: 1rem;
-                        border-color: $alert;
-                        color: $alert;
+                    margin-top: 2rem;
+                    border-radius: 1rem;
+
+                    li{
+                        color: white;
+                        background-color: $alert;
+
+                        &:first-child{
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                top:0;
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 0 30px 4rem 0;
+                                border-color: transparent $alert transparent transparent;
+                                left: -30px;
+                            }
+                        }
+
+
                     }
 
                 }
 
             }
-
 
 
         }
@@ -190,6 +206,19 @@ header{
             padding: 1.4rem 2rem;
             font-size: 2rem;
             width: 100%;
+        }
+
+
+        #submited{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100%;
+            padding: 20vh 0px;
+            img{
+                margin-bottom: 5rem;
+            }
         }
     }
 }

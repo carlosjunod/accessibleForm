@@ -11,12 +11,12 @@
 <body>
 
 
-    <header>
+    <header role="banner">
         <h1>Super valid registration form</h1>
     </header>
 
     <section id="form-registration">
-        <section id="contact-info">
+        <aside id="contact-info" role="complementary">
             <h2>Contact Information</h2>
             <div class="info">
                 <p>Have questions or concerns? Reach out to us directly</p>
@@ -25,16 +25,16 @@
                     <li class="email">contact@formdemo.com</li>
                 </ul>
             </div>
-        </section>
+        </aside>
         <!-- /#contact-info -->
 
         <section id="register">
-            <h2>Register</h2>
-            <form action="" id="form">
+            <h2 tabindex="0">Register</h2>
+            <form action="#" id="form" role="form">
 
                 <div class="labelwrap">
                     <p class="field">
-                        <label for="name">Name <span>require</span></label>
+                        <label for="fullName">Name <span>require</span></label>
                         <input type="text" name="name" id="fullName" value="" minlength="2" maxlength="50" required/>
                     </p>
                     <ul class="message" data-name>
@@ -48,17 +48,17 @@
 
                     </p>
                     <ul class="message" data-email>
-                        <li>Must be a valid email address</li>
-                    </div>
+                        <li>Insert your email (eg: name@domain.com)</li>
+                    </ul>
                 </div>
 
                 <div class="labelwrap">
                     <p class="field">
                         <label for="password">Password <span>require</span></label>
-                        <input type="password" name="password" id="password" value="" minlength="8" maxlength="100 " required/>
+                        <input type="password" name="password" id="password" value="" minlength="8" maxlength="100" required/>
                     </p>
                     <ul class="message" data-password>
-                        <li>Must cotain on uppercase letter, one lowercase letter, 10 or more characters, and at least one number.</li>
+                        <li>Must cotain on uppercase letter, one lowercase letter, 8 or more characters, and at least one number and one symbol.</li>
                     </ul>
                 </div>
 
@@ -68,13 +68,14 @@
                         <input type="tel" name="phone" id="phone" value="" pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" />
                     </p>
                     <ul class="message" data-phone>
+                        <li>Insert a your phone number (eg: 123-456-7890)</li>
                     </ul>
                 </div>
 
                 <div class="labelwrap">
                     <p class="field">
                         <label for="phone">Country</label>
-                        <select type="select" name="Country" id="country">
+                        <select name="Country" id="country">
                             <option disabled selected value> -- select an option -- </option>
                             <option value="AF">Afghanistan</option>
                         	<option value="AX">Åland Islands</option>

@@ -160,7 +160,7 @@ header {
       #register form .labelwrap .field label {
         color: #115881; }
         #register form .labelwrap .field label span {
-          color: #1d95db;
+          color: #115881;
           font-size: 0.9em;
           font-style: italic;
           font-weight: lighter; }
@@ -200,16 +200,17 @@ header {
         #register form .labelwrap .message.alert li {
           color: white;
           background-color: #FF5A5F; }
-          #register form .labelwrap .message.alert li:first-child:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 30px 4rem 0;
-            border-color: transparent #FF5A5F transparent transparent;
-            left: -30px; }
+          @media only screen and (min-width: 1024px) {
+            #register form .labelwrap .message.alert li:first-child:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 30px 4rem 0;
+              border-color: transparent #FF5A5F transparent transparent;
+              left: -30px; } }
   #register form button {
     background-color: #087E8B;
     border-style: none;

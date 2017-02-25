@@ -98,15 +98,14 @@ submit.addEventListener('click', (el)=> {
     passwordValidate.getErrors();
     phoneValidate.getErrors();
 
-    form.addEventListener('change', ()=>{
-        // printing messages
-        msgName.innerHTML = fullNameValidate.errors.join('');
-        msgEmail.innerHTML = emailValidate.errors.join('');
-        msgPass.innerHTML = passwordValidate.errors.join('');
-        msgPhone.innerHTML = phoneValidate.errors.join('');
-        msgPass.innerHTML = passwordValidate.errors.join('');
-    })
-    
+
+    // printing messages
+    msgName.innerHTML = fullNameValidate.errors.join('');
+    msgEmail.innerHTML = emailValidate.errors.join('');
+    msgPass.innerHTML = passwordValidate.errors.join('');
+    msgPhone.innerHTML = phoneValidate.errors.join('');
+    msgPass.innerHTML = passwordValidate.errors.join('');
+
     console.log(messages);
 
     // check if messages are empty.
